@@ -27,19 +27,19 @@ public class TestMage extends TestConstructors {
 	@Test
 	public void testHealerHunterKnightAttack() {
 		c.battle(f);
-		assertEquals(f.getReceivedDamage(), -150);
+		assertEquals(f.getReceivedDamage(), 0);
 		assertEquals(f.getAttackPoints(), 600);
-		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 6150);
+		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 6000);
 		assertTrue(f.isAbstractCardAlive());
 		d.battle(f);
-		assertEquals(f.getReceivedDamage(), 250);
+		assertEquals(f.getReceivedDamage(), 400);
 		assertEquals(f.getAttackPoints(), 600);
-		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 5750);
+		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 5600);
 		assertTrue(f.isAbstractCardAlive());
 		e.battle(f);
-		assertEquals(f.getReceivedDamage(), 750);
+		assertEquals(f.getReceivedDamage(), 900);
 		assertEquals(f.getAttackPoints(), 600);
-		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 5250);
+		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 5100);
 		assertTrue(f.isAbstractCardAlive());
 	}
 

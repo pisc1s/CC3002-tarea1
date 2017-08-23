@@ -18,9 +18,9 @@ public class TestAssassin extends TestConstructors {
 	@Test
 	public void testHealerAttack() {
 		c.battle(a);
-		assertEquals(a.getReceivedDamage(), -150);
+		assertEquals(a.getReceivedDamage(), 0);
 		assertEquals(a.getAttackPoints(), 100);
-		assertEquals(a.getLifePoints() - a.getReceivedDamage(), 1150);
+		assertEquals(a.getLifePoints() - a.getReceivedDamage(), 1000);
 		assertTrue(a.isAbstractCardAlive());
 	}
 

@@ -50,12 +50,6 @@ public abstract class AbstractCard implements Hearthstone {
 		return this.lifePoints;
 	}
 
-	/**
-	 * Gets the received damage of a card
-	 * 
-	 * @return the card's received damage
-	 */
-
 	public int getReceivedDamage() {
 		return this.receivedDamage;
 	}
@@ -79,8 +73,9 @@ public abstract class AbstractCard implements Hearthstone {
 	}
 
 	public boolean isAbstractCardAlive() {
-		if (this.getLifePoints() - this.getReceivedDamage() > 0)
+		if (this.getLifePoints() - this.getReceivedDamage() > 0) {
 			return true;
+		}
 		return false;
 	}
 
@@ -89,8 +84,9 @@ public abstract class AbstractCard implements Hearthstone {
 	}
 
 	public void healerAttack(Hearthstone c, int attackPoints) {
-		if (c.isAbstractCardAlive())
+		if (c.isAbstractCardAlive() && c.getReceivedDamage() > 0) {
 			c.updateReceivedDamage(-attackPoints / 2);
+		}
 	}
 
 	public void druidAttack(Hearthstone c, int attackPoints) {

@@ -8,6 +8,13 @@ package hearthstone;
 
 public interface Hearthstone {
 	/**
+	 * Gets the received damage of a card
+	 * 
+	 * @return the card's received damage
+	 */
+	public int getReceivedDamage();
+
+	/**
 	 * Updates the field <code>receivedDamage</code> by adding the given amount
 	 * to it
 	 * 
@@ -214,4 +221,5 @@ public interface Hearthstone {
 	 */
 
 	public void battleWithWarlock(Warlock c);
+
 }

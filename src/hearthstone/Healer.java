@@ -13,8 +13,9 @@ public class Healer extends AbstractCard {
 
 	@Override
 	public void battle(Hearthstone c) {
-		if (this.isAbstractCardAlive() && c.isAbstractCardAlive())
+		if (this.isAbstractCardAlive() && c.isAbstractCardAlive()) {
 			c.battleWithHealer(this);
+		}
 	}
 
 	@Override
