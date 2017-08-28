@@ -8,6 +8,13 @@ package hearthstone;
 
 public interface Hearthstone {
 	/**
+	 * Gets the attack points of a card
+	 * 
+	 * @return the card's attack points
+	 */
+	public int getAttackPoints();
+
+	/**
 	 * Gets the received damage of a card
 	 * 
 	 * @return the card's received damage

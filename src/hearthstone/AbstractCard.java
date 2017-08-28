@@ -54,12 +54,6 @@ public abstract class AbstractCard implements Hearthstone {
 		return this.receivedDamage;
 	}
 
-	/**
-	 * Gets the attack points of a card
-	 * 
-	 * @return the card's attack points
-	 */
-
 	public int getAttackPoints() {
 		return this.attackPoints;
 	}
@@ -96,11 +90,15 @@ public abstract class AbstractCard implements Hearthstone {
 
 	public void paladinAttack(Hearthstone c, int attackPoints) {
 		c.updateAttackPoints(attackPoints / 3);
-		c.updateReceivedDamage(-attackPoints / 3);
+		if (c.getReceivedDamage() > 0) {
+			c.updateReceivedDamage(-attackPoints / 3);
+		}
 	}
 
 	public void shamanAttack(Hearthstone c, int attackPoints) {
-		c.updateAttackPoints(-attackPoints / 3);
+		if (c.getAttackPoints() > 0) {
+			c.updateAttackPoints(-attackPoints / 3);
+		}
 		c.updateReceivedDamage(attackPoints / 3);
 	}
 }

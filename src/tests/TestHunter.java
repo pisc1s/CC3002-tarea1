@@ -46,9 +46,9 @@ public class TestHunter extends TestConstructors {
 	@Test
 	public void testPaladinAttack() {
 		g.battle(d);
-		assertEquals(d.getReceivedDamage(), -233);
+		assertEquals(d.getReceivedDamage(), 0);
 		assertEquals(d.getAttackPoints(), 633);
-		assertEquals(d.getLifePoints() - d.getReceivedDamage(), 4233);
+		assertEquals(d.getLifePoints() - d.getReceivedDamage(), 4000);
 		assertTrue(d.isAbstractCardAlive());
 	}
 

@@ -42,9 +42,9 @@ public class TestDruid extends TestConstructors {
 	@Test
 	public void testPaladinAttack() {
 		g.battle(b);
-		assertEquals(b.getReceivedDamage(), -466);
+		assertEquals(b.getReceivedDamage(), 0);
 		assertEquals(b.getAttackPoints(), 666);
-		assertEquals(b.getLifePoints() - b.getReceivedDamage(), 2466);
+		assertEquals(b.getLifePoints() - b.getReceivedDamage(), 2000);
 		assertTrue(b.isAbstractCardAlive());
 	}
 

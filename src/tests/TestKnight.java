@@ -46,9 +46,9 @@ public class TestKnight extends TestConstructors {
 	@Test
 	public void testPaladinAttack() {
 		g.battle(e);
-		assertEquals(e.getReceivedDamage(), -233);
+		assertEquals(e.getReceivedDamage(), 0);
 		assertEquals(e.getAttackPoints(), 733);
-		assertEquals(e.getLifePoints() - e.getReceivedDamage(), 5233);
+		assertEquals(e.getLifePoints() - e.getReceivedDamage(), 5000);
 		assertTrue(e.isAbstractCardAlive());
 	}
 

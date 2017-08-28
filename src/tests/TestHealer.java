@@ -46,9 +46,9 @@ public class TestHealer extends TestConstructors {
 	@Test
 	public void testPaladinAttack() {
 		g.battle(c);
-		assertEquals(c.getReceivedDamage(), -466);
+		assertEquals(c.getReceivedDamage(), 0);
 		assertEquals(c.getAttackPoints(), 766);
-		assertEquals(c.getLifePoints() - c.getReceivedDamage(), 3466);
+		assertEquals(c.getLifePoints() - c.getReceivedDamage(), 3000);
 		assertTrue(c.isAbstractCardAlive());
 	}
 

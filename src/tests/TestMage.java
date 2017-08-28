@@ -46,9 +46,9 @@ public class TestMage extends TestConstructors {
 	@Test
 	public void testPaladinAttack() {
 		g.battle(f);
-		assertEquals(f.getReceivedDamage(), -233);
+		assertEquals(f.getReceivedDamage(), 0);
 		assertEquals(f.getAttackPoints(), 833);
-		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 6233);
+		assertEquals(f.getLifePoints() - f.getReceivedDamage(), 6000);
 		assertTrue(f.isAbstractCardAlive());
 	}
 
