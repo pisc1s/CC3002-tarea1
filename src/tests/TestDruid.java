@@ -14,9 +14,9 @@ public class TestDruid extends TestConstructors {
 		assertEquals(b.getLifePoints() - b.getReceivedDamage(), 1900);
 		assertTrue(b.isAbstractCardAlive());
 		c.battle(b);
-		assertEquals(b.getReceivedDamage(), -50);
+		assertEquals(b.getReceivedDamage(), 0);
 		assertEquals(b.getAttackPoints(), 200);
-		assertEquals(b.getLifePoints() - b.getReceivedDamage(), 2050);
+		assertEquals(b.getLifePoints() - b.getReceivedDamage(), 2000);
 		assertTrue(b.isAbstractCardAlive());
 	}
 
@@ -52,7 +52,7 @@ public class TestDruid extends TestConstructors {
 	public void testShamanAttack() {
 		h.battle(b);
 		assertEquals(b.getReceivedDamage(), 533);
-		assertEquals(b.getAttackPoints(), -333);
+		assertEquals(b.getAttackPoints(), 0);
 		assertEquals(b.getLifePoints() - b.getReceivedDamage(), 1467);
 		assertTrue(b.isAbstractCardAlive());
 	}

@@ -59,11 +59,11 @@ public abstract class AbstractCard implements Hearthstone {
 	}
 
 	public void updateReceivedDamage(int amount) {
-		this.receivedDamage += amount;
+		this.receivedDamage = Math.max(this.receivedDamage + amount, 0);
 	}
 
 	public void updateAttackPoints(int amount) {
-		this.attackPoints += amount;
+		this.attackPoints = Math.max(this.attackPoints + amount, 0);
 	}
 
 	public boolean isAbstractCardAlive() {
@@ -78,7 +78,7 @@ public abstract class AbstractCard implements Hearthstone {
 	}
 
 	public void healerAttack(Hearthstone c, int attackPoints) {
-		if (c.isAbstractCardAlive() && c.getReceivedDamage() > 0) {
+		if (c.isAbstractCardAlive()) {
 			c.updateReceivedDamage(-attackPoints / 2);
 		}
 	}
@@ -90,15 +90,12 @@ public abstract class AbstractCard implements Hearthstone {
 
 	public void paladinAttack(Hearthstone c, int attackPoints) {
 		c.updateAttackPoints(attackPoints / 3);
-		if (c.getReceivedDamage() > 0) {
-			c.updateReceivedDamage(-attackPoints / 3);
-		}
+		c.updateReceivedDamage(-attackPoints / 3);
+
 	}
 
 	public void shamanAttack(Hearthstone c, int attackPoints) {
-		if (c.getAttackPoints() > 0) {
-			c.updateAttackPoints(-attackPoints / 3);
-		}
+		c.updateAttackPoints(-attackPoints / 3);
 		c.updateReceivedDamage(attackPoints / 3);
 	}
 }

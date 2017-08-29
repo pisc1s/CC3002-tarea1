@@ -56,7 +56,7 @@ public class TestAssassin extends TestConstructors {
 	public void testShamanAttack() {
 		h.battle(a);
 		assertEquals(a.getReceivedDamage(), 266);
-		assertEquals(a.getAttackPoints(), -166);
+		assertEquals(a.getAttackPoints(), 0);
 		assertEquals(a.getLifePoints() - a.getReceivedDamage(), 734);
 		assertTrue(a.isAbstractCardAlive());
 	}
