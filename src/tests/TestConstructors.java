@@ -1,6 +1,7 @@
 package tests;
 
 import static org.junit.Assert.*;
+import hearthstone.AbstractCard;
 import hearthstone.Assassin;
 import hearthstone.Druid;
 import hearthstone.Healer;
@@ -15,15 +16,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TestConstructors {
-	protected Assassin a;
-	protected Druid b;
+	protected AbstractCard a;
+	protected AbstractCard b;
 	protected Healer c;
 	protected Hunter d;
 	protected Knight e;
 	protected Mage f;
 	protected Paladin g;
-	protected Shaman h;
-	protected Warlock i;
+	protected AbstractCard h;
+	protected AbstractCard i;
 
 	@Before
 	public void setUp() throws Exception {

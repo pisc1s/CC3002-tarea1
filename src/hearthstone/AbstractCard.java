@@ -91,11 +91,46 @@ public abstract class AbstractCard implements Hearthstone {
 	public void paladinAttack(Hearthstone c, int attackPoints) {
 		c.updateAttackPoints(attackPoints / 3);
 		c.updateReceivedDamage(-attackPoints / 3);
-
 	}
 
 	public void shamanAttack(Hearthstone c, int attackPoints) {
 		c.updateAttackPoints(-attackPoints / 3);
 		c.updateReceivedDamage(attackPoints / 3);
+	}
+
+	public void battleWithAssassin(Assassin c) {
+		c.regularAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithDruid(Druid c) {
+		c.druidAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithHealer(Healer c) {
+		c.healerAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithHunter(Hunter c) {
+		c.regularAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithKnight(Knight c) {
+		c.regularAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithMage(Mage c) {
+		c.regularAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithPaladin(Paladin c) {
+		c.paladinAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithShaman(Shaman c) {
+		c.shamanAttack(this, c.getAttackPoints());
+	}
+
+	public void battleWithWarlock(Warlock c) {
+		c.regularAttack(this, c.getAttackPoints());
 	}
 }

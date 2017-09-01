@@ -19,36 +19,6 @@ public class Druid extends AbstractCard {
 	}
 
 	@Override
-	public void battleWithAssassin(Assassin c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithDruid(Druid c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithHealer(Healer c) {
-		c.healerAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithHunter(Hunter c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithKnight(Knight c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithMage(Mage c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
 	public void battleWithPaladin(Paladin c) {
 		c.paladinAttack(this, 2 * c.getAttackPoints());
 	}
@@ -56,10 +26,5 @@ public class Druid extends AbstractCard {
 	@Override
 	public void battleWithShaman(Shaman c) {
 		c.shamanAttack(this, 2 * c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithWarlock(Warlock c) {
-		c.regularAttack(this, c.getAttackPoints());
 	}
 }

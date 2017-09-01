@@ -19,43 +19,8 @@ public class Assassin extends AbstractCard {
 	}
 
 	@Override
-	public void battleWithAssassin(Assassin c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
 	public void battleWithDruid(Druid c) {
 		this.updateAttackPoints(c.getAttackPoints() / 2);
-	}
-
-	@Override
-	public void battleWithHealer(Healer c) {
-		c.healerAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithHunter(Hunter c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithKnight(Knight c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithMage(Mage c) {
-		c.regularAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithPaladin(Paladin c) {
-		c.paladinAttack(this, c.getAttackPoints());
-	}
-
-	@Override
-	public void battleWithShaman(Shaman c) {
-		c.shamanAttack(this, c.getAttackPoints());
 	}
 
 	@Override
